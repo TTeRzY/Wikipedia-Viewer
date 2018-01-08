@@ -25,7 +25,7 @@ $(document).ready(function(){
                     info.push(f.snippet);
                     for(var i =0; i < info.length; i++){
                         if(!result[i])
-                            result.push(info[i] + "<br/><br/>");
+                            result.push("<br/><br/>" + info[i] + "<br/><br/>");
                     }
                     message.html(result);
                 });
