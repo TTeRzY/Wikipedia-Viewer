@@ -1,16 +1,40 @@
 $(document).ready(function(){
-    $("#search-btn").click(function(){
+    $("#form").submit(function(){
+
+    });
+
+    $('#search-btn').click(function(){
+        var getInput = $('#search');
+        var message = $("#show-content");
+        var apiUrl = "https://en.wikipedia.org/w/api.php?&callback=?";
+
         $.ajax({
-            url: 'https://en.wikipedia.org/w/api.php',
-            data: {action: 'query', list: 'search', srsearch: $("input[name=Wikipedia]").val(), format: 'json' },
-            dataType: 'json',
-            success: takeResults
+            type: "GET",
+            url: apiUrl,
+            data: {
+                action: 'query',
+                list: 'search',
+                srsearch: getInput.val(),
+                format: 'json'
+            },
+            dataType: "jsonp",
+            success: function (data) {
+                var result = [];
+                var info = [];
+                data.query.search.map(function(f){
+                    info.push(f.snippet);
+                    for(var i =0; i < info.length; i++){
+                        if(!result[i])
+                            result.push(info[i] + "<br/><br/>");
+                    }
+                    message.html(result);
+                });
+            },
+            error: function (errorMessage) {
+            }
+
+
         });
     });
-});
 
-function takeResults(data){
-    for(var i = 0; i < data.query.search.length; i++){
-        console.log(data[i]);
-    }
-}
+});

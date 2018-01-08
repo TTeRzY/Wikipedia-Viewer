@@ -1,7 +1,5 @@
 .box{
     height: 100%;
-    display: flex;
-    justify-content: center;
     min-height: 54em;
     /*align-items: center; cneter div horizontal and vertical*/
 }
