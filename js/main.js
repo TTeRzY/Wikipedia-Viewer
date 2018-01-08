@@ -21,11 +21,14 @@ $(document).ready(function(){
             success: function (data) {
                 var result = [];
                 var info = [];
+
                 data.query.search.map(function(f){
+                    var title = f.title;
+
                     info.push(f.snippet);
                     for(var i =0; i < info.length; i++){
                         if(!result[i])
-                            result.push("<br/><br/>" + info[i] + "<br/><br/>");
+                            result.push("<li><br/>" + title + "<br/><br/>" + info[i] + "<br/><br/></li>");
                     }
                     message.html(result);
                 });

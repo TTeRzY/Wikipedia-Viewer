@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container box">
-        <div class="main-content">
-            <h1 class="text-center" >Wikipedia Viewer</h1>
-            <a class="btn btn-info" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Pick Random Article</a>
+<div class="container box">
+
+    <div class="main-content">
+        <h1 class="text-center" >Wikipedia Viewer</h1>
+        <a class="btn btn-info" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Pick Random Article</a>
 
 
-            <div class="form-group">
-                <label>Search Wikipedia Article</label>
-                <input id="search" type="text" class="form-control" id="search-box" aria-describedby="search_text" placeholder="Search...">
-                <small id="emailHelp" class="form-text text-muted">You can search Wikipedia entries in a search box entries.</small>
-            </div>
-            <button type="submit" id="search-btn" class="btn btn-primary">Search</button>
-
-
-
+        <div class="form-group">
+            <label>Search Wikipedia Article</label>
+            <input id="search" type="text" class="form-control" id="search-box" aria-describedby="search_text" placeholder="Search...">
+            <small id="emailHelp" class="form-text text-muted">You can search Wikipedia entries in a search box entries.</small>
         </div>
-        <div id="show-content">
+        <button type="submit" id="search-btn" class="btn btn-primary">Search</button>
 
-        </div>
+
+
     </div>
+    <ul id="show-content">
+
+    </ul>
+</div>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGHSM65olyiM4AqrvSY7mT2cBn-7-3zBA &callback=initMap"
