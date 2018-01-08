@@ -1,0 +1,22 @@
+.box{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 54em;
+    /*align-items: center; cneter div horizontal and vertical*/
+}
+
+.main-content{
+    flex: none;
+}
+
+.main-content a{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.main-content button{
+    margin: auto;
+    display: block
+}
