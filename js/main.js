@@ -30,7 +30,7 @@ $(document).ready(function(){
                     info.push(f.snippet);
                     for(var i =0; i < info.length; i++){
                         if(!result[i])
-                            result.push("<li><br/>" + title + "<br/><br/>" + info[i] + "<br/><br/></li>" + "<a href=>" + linkItem  + title +"</a>");
+                            result.push("<li><br/>" + title + "<br/><br/>" + info[i] + "<br/><br/></li>" + "<a target=\"_blank\" href=\">" + linkItem  + title + "\"" +"</a>");
                     }
                     message.html(result);
                 });
