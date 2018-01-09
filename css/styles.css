@@ -1,18 +1,28 @@
+body{
+    padding: 0;
+    background-color: #008080 !important;
+}
+
+a{
+    color: #ffffff !important;
+    list-style-type: none;
+}
+
 .box{
-    height: 100%;
-    justify-content: center;
-    min-height: 54em;
-    /*align-items: center; cneter div horizontal and vertical*/
+    max-width: 50%;
 }
 
 .main-content{
-    flex: none;
+    max-width: 50%;
+    display: block;
+    margin: auto;
 }
 
 .main-content a{
     display: block;
     margin-top: 30px;
     margin-bottom: 30px;
+
 }
 
 .main-content button{
@@ -22,10 +32,26 @@
 
 ul li{
     list-style-type: none;
+    font-size: 12px;
+    color: #ffffff;
+    margin: 10px 0 10px 0;
+    background-color: rgba(0,0,0,0.2);
+    padding: 30px;
 }
 
 #show-content{
-    margin-top: 40px;
-    padding: 60px;
-    background-color: #ddd;
+    margin: 0;
+    padding: 0;
+
+}
+
+.holder{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-muted{
+    color: #ffffff !important;
 }

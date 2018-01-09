@@ -28,7 +28,7 @@ $(document).ready(function(){
                     info.push(f.snippet);
                     for(var i =0; i < info.length; i++){
                         if(!result[i])
-                            result.push("<li><br/>" + title + "<br/><br/>" + info[i] + "<br/><br/></li>" + "<a href="+linkItem+">Learn more</a>" );
+                            result.push("<li><h3>" + title + "</h3><br><br>" + info[i]  + "<br><br> <a class='btn btn-info' href="+linkItem+">Learn more</a>" + "</li>");
                     }
                     message.html(result);
 
