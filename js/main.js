@@ -19,20 +19,20 @@ $(document).ready(function(){
             },
             dataType: "jsonp",
             success: function (data) {
-                console.log(data);
                 var result = [];
                 var info = [];
 
                 data.query.search.map(function(f){
-                    console.log(f);
-                    var title = f.title;
-                    var linkItem = "https://en.wikipedia.org/wiki/";
+                    var title = f.title.split(' ').join('_');
+                    var linkItem = 'https://en.wikipedia.org/wiki/' + title;
                     info.push(f.snippet);
                     for(var i =0; i < info.length; i++){
                         if(!result[i])
-                            result.push("<li><br/>" + title + "<br/><br/>" + info[i] + "<br/><br/></li>" + "<a target=\"_blank\" href=\">" + linkItem  + title + "\"" +"</a>");
+                            result.push("<li><br/>" + title + "<br/><br/>" + info[i] + "<br/><br/></li>" + "<a href="+linkItem+">Learn more</a>" );
                     }
                     message.html(result);
+
+
                 });
             },
             error: function (errorMessage) {
