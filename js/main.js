@@ -16,6 +16,7 @@ $(document).ready(function(){
                 list: 'search',
                 srsearch: getInput.val(),
                 format: 'json'
+
             },
             dataType: "jsonp",
             success: function (data) {

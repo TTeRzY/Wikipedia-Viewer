@@ -8,6 +8,10 @@ a{
     list-style-type: none;
 }
 
+h1{
+    color: #ffffff !important;
+}
+
 .box{
     max-width: 50%;
 }
