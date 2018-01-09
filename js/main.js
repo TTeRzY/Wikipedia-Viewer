@@ -6,10 +6,10 @@ $(document).ready(function(){
     $('#search-btn').click(function(){
         var getInput = $('#search');
         var message = $("#show-content");
-        var apiUrl = "https://en.wikipedia.org/w/api.php?&callback=?";
+        var apiUrl = "https://en.wikipedia.org/w/api.php?";
 
         $.ajax({
-            type: "GET",
+            type: "POST",
             url: apiUrl,
             data: {
                 action: 'query',
@@ -19,16 +19,18 @@ $(document).ready(function(){
             },
             dataType: "jsonp",
             success: function (data) {
+                console.log(data);
                 var result = [];
                 var info = [];
 
                 data.query.search.map(function(f){
+                    console.log(f);
                     var title = f.title;
-
+                    var linkItem = "https://en.wikipedia.org/wiki/";
                     info.push(f.snippet);
                     for(var i =0; i < info.length; i++){
                         if(!result[i])
-                            result.push("<li><br/>" + title + "<br/><br/>" + info[i] + "<br/><br/></li>");
+                            result.push("<li><br/>" + title + "<br/><br/>" + info[i] + "<br/><br/></li>" + "<a href=>" + linkItem  + title +"</a>");
                     }
                     message.html(result);
                 });
