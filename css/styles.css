@@ -1,6 +1,8 @@
 body{
     padding: 0;
-    background-color: #008080 !important;
+    //background-color: #008080 !important;
+    background-image: url("http://www.glaad.org/sites/default/files/images/2014-08/wikipedia.jpg");
+    background-repeat: no-repeat;
 }
 
 a{
@@ -8,8 +10,8 @@ a{
     list-style-type: none;
 }
 
-h1{
-    color: #ffffff !important;
+label{
+    color: #333;
 }
 
 .box{
